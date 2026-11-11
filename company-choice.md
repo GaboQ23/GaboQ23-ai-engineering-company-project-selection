@@ -24,6 +24,7 @@ Seguimiento unificado de productos y paquetes: saber en tiempo real dónde está
 - Detecta problemas antes de que escalen (paquete detenido, entrega fallida, dirección incorrecta, retraso) y propone qué hacer.
 - Aprende con el tiempo qué transportistas fallan más en cada ruta, por ejemplo por retrasos o paquetes dañados, y lo tiene en cuenta en sus recomendaciones.
 - Si el caso es dudoso, lo pasa a un coordinador logístico en lugar de decidir solo.
+- Sigue también los paquetes que vuelven: cuando un cliente inicia una devolución, muestra su estado en el mismo lugar que los envíos y avisa al equipo de Logística Inversa cuando llega al almacén.
 
 **Qué información necesitaría:**
 - El stock por SKU en los almacenes de Los Ángeles y Zaragoza.
@@ -36,6 +37,6 @@ Seguimiento unificado de productos y paquetes: saber en tiempo real dónde está
 - Un estado unificado de cada paquete, que sirve para el portal público de seguimiento y para Experiencia del Cliente.
 - Alertas al coordinador cuando hay una incidencia, y alertas de stock bajo al equipo de compras.
 - Datos para el dashboard de rendimiento de transportistas, algo que hoy TrackFlow no tiene.
-- Sigue también los paquetes que vuelven: cuando un cliente inicia una devolución, muestra su estado en el mismo lugar que los envíos y avisa al equipo de Logística Inversa cuando llega al almacén.
+
 
 Así el equipo de 6 coordinadores dejaría de buscar paquetes a mano y dedicaría su tiempo a resolver las incidencias reales.
