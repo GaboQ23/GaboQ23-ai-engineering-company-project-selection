@@ -6,8 +6,9 @@ Elegí TrackFlow porque me atrae la logística y resolver problemas reales con d
 
 ## Departamentos que más me interesan
 
-- **Operaciones de Almacén (Ana Whitfield, ~70 operarios):** los dos almacenes funcionan con sistemas distintos, no hay inventario en tiempo real a nivel global y las discrepancias se detectan tarde. Me interesa la API de inventario unificada y las alertas de stock.
+- **Operaciones de Almacén (Ana Whitfield, ~70 operarios):** los dos almacenes funcionan con sistemas distintos, no hay inventario en tiempo real a nivel global y las discrepancias se detectan tarde. Me interesan la API de inventario unificada y las alertas de stock.
 - **Última Milla y Gestión de Transportistas (Carlos Vega):** la asignación de transportista es manual y el seguimiento obliga a consultar cada portal por separado. Me interesan el seguimiento unificado y la selección inteligente de transportista.
+- **Logística Inversa (Sofía Ramos, equipo de 5 personas):** las devoluciones son entre el 18% y el 25% del volumen y todas pasan por revisión manual, sin criterios automáticos. Me interesan la aprobación automática y la inspección asistida por IA, porque una devolución es un paquete que vuelve y también hay que seguirlo.
 
 ## Reto de IA que más quiero construir
 
@@ -35,5 +36,6 @@ Seguimiento unificado de productos y paquetes: saber en tiempo real dónde está
 - Un estado unificado de cada paquete, que sirve para el portal público de seguimiento y para Experiencia del Cliente.
 - Alertas al coordinador cuando hay una incidencia, y alertas de stock bajo al equipo de compras.
 - Datos para el dashboard de rendimiento de transportistas, algo que hoy TrackFlow no tiene.
+- Sigue también los paquetes que vuelven: cuando un cliente inicia una devolución, muestra su estado en el mismo lugar que los envíos y avisa al equipo de Logística Inversa cuando llega al almacén.
 
 Así el equipo de 6 coordinadores dejaría de buscar paquetes a mano y dedicaría su tiempo a resolver las incidencias reales.
