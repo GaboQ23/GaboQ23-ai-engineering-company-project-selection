@@ -1,36 +1,39 @@
 # Elección de empresa: TrackFlow
 
-Elegí TrackFlow porque me atrae la logística y resolver problemas reales con datos e IA, donde cada sistema conecta con un paquete físico. Me interesa la complejidad de unificar dos países, dos idiomas y dos stacks técnicos. Además, sus retos combinan ingeniería de datos, agentes y visión por computador, que es justo lo que quiero practicar.
+## Por qué elegí TrackFlow
+
+Elegí TrackFlow porque me atrae la logística y resolver problemas reales con datos e IA, donde cada sistema conecta con un paquete físico que viaja desde una estantería hasta la puerta de alguien. Me interesa la complejidad de unificar dos países, dos idiomas y dos stacks técnicos: los almacenes de Los Ángeles y Zaragoza usan sistemas distintos y no ven el inventario del otro. Me llamó la atención que para seguir un paquete haya que consultar uno por uno los portales de 8 transportistas (UPS, FedEx, DHL, MRW, SEUR...) y que no existan datos históricos de su rendimiento. Es un problema de datos muy concreto, medible y con mucho impacto, que es justo lo que quiero practicar.
 
 ## Departamentos que más me interesan
-- Logística Inversa (Sofía Ramos): aprobación automática de devoluciones e inspección asistida por IA.
-- Experiencia del Cliente (Valentina Cruz): agente de primera línea y base de conocimiento con RAG.
+
+- **Operaciones de Almacén (Ana Whitfield, ~70 operarios):** los dos almacenes funcionan con sistemas distintos, no hay inventario en tiempo real a nivel global y las discrepancias se detectan tarde. Me interesa la API de inventario unificada y las alertas de stock.
+- **Última Milla y Gestión de Transportistas (Carlos Vega):** la asignación de transportista es manual y el seguimiento obliga a consultar cada portal por separado. Me interesan el seguimiento unificado y la selección inteligente de transportista.
 
 ## Reto de IA que más quiero construir
-Sistema de inspección de devoluciones: el operario fotografía el producto y la IA clasifica su estado (reacondicionar, desechar, etc.).
+
+Seguimiento unificado de productos y paquetes: saber en tiempo real dónde está cada producto (en qué almacén) y cada paquete (en qué transportista y en qué estado) desde un solo lugar, y recomendar el mejor transportista para cada envío según destino, peso y urgencia.
 
 ## Mi idea de Agente de IA
 
-Agente de Inspección de Devoluciones para el equipo de Sofía Ramos.
+**Agente de Seguimiento y Recomendación de Transportista** para el equipo de Carlos Vega.
 
 **Qué haría:**
-- Cuando llega un paquete devuelto al almacén, el operario hace 2 o 3 fotos del producto con el móvil o la tablet.
-- El agente analiza las fotos y clasifica el estado del producto: como nuevo, reacondicionar, dañado o desechar, explicando en una frase por qué (por ejemplo: "caja abierta pero producto sin marcas de uso").
-- Compara lo que ve con el motivo de devolución que indicó el cliente (por ejemplo, "llegó roto") y avisa si no coincide.
-- Aplica las reglas de cada marca cliente para recomendar qué hacer (devolver al stock, enviar a reacondicionar, desechar, reembolso total o parcial).
-- Si no está seguro, no decide solo: pasa el caso a una persona del equipo para que lo revise.
+- Cuando entra un pedido, mira en qué almacén hay stock y recomienda qué transportista conviene según destino, peso y urgencia, explicando por qué en una frase.
+- Después de enviar, vigila el estado del paquete en todos los transportistas y lo muestra en un único lugar, sin tener que entrar a cada portal.
+- Detecta problemas antes de que escalen (paquete detenido, entrega fallida, dirección incorrecta, retraso) y propone qué hacer.
+- Aprende con el tiempo qué transportistas fallan más en cada ruta, por ejemplo por retrasos o paquetes dañados, y lo tiene en cuenta en sus recomendaciones.
+- Si el caso es dudoso, lo pasa a un coordinador logístico en lugar de decidir solo.
 
 **Qué información necesitaría:**
-- Las fotos del producto devuelto.
-- Los datos del pedido original: SKU, marca cliente, almacén (Los Ángeles o Zaragoza) y fecha de entrega.
-- El motivo de devolución que dio el consumidor.
-- Las reglas de devolución configuradas por cada marca cliente.
-- Ejemplos de inspecciones anteriores hechas por el equipo, para aprender qué cuenta como "reacondicionable" en cada tipo de producto.
+- El stock por SKU en los almacenes de Los Ángeles y Zaragoza.
+- Los datos del pedido: destino, peso, urgencia y cliente.
+- Los estados de envío que reportan los 8 transportistas.
+- El histórico de entregas: entregas a tiempo, incidencias por ruta y coste por kilo.
 
 **Qué produciría o desencadenaría:**
-- Un registro de inspección con la clasificación, las fotos y la explicación, guardado para cada devolución.
-- La acción siguiente según el resultado: actualizar el inventario si el producto vuelve a stock, crear la orden de reacondicionamiento o marcarlo para desecho.
-- Un aviso a Experiencia del Cliente para que el consumidor sepa el estado de su reembolso.
-- Datos para el dashboard de devoluciones: qué productos y qué marcas se devuelven más y por qué motivos, algo que hoy TrackFlow no puede ver.
+- Una recomendación de transportista para cada envío, con su explicación.
+- Un estado unificado de cada paquete, que sirve para el portal público de seguimiento y para Experiencia del Cliente.
+- Alertas al coordinador cuando hay una incidencia, y alertas de stock bajo al equipo de compras.
+- Datos para el dashboard de rendimiento de transportistas, algo que hoy TrackFlow no tiene.
 
-Así las inspecciones serían rápidas y consistentes entre los dos almacenes, y el equipo de 5 personas dedicaría su tiempo solo a los casos dudosos.
+Así el equipo de 6 coordinadores dejaría de buscar paquetes a mano y dedicaría su tiempo a resolver las incidencias reales.
